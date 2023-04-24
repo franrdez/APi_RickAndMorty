@@ -1,0 +1,14 @@
+.rick-list{
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.example-card {
+  max-width: 400px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+
