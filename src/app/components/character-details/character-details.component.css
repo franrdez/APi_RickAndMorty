@@ -1,0 +1,14 @@
+.details{
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 6rem;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.example-card{
+  width: 300px;
+  margin: auto;
+  margin-top: 5px;
+}

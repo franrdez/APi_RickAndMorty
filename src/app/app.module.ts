@@ -18,8 +18,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CharacterDetailsComponent } from './components/character-details/character-details.component';
-
-
+import { MatButtonModule } from '@angular/material/button';
+import { StoreModule } from '@ngrx/store';
+import {MatListModule} from '@angular/material/list';
+import { PaginatorPipe } from './pipes/paginator.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { CharacterDetailsComponent } from './components/character-details/charac
     HomeComponent,
     CharacterListComponent,
     CharacterCardClickableDirective,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    PaginatorPipe
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,10 @@ import { CharacterDetailsComponent } from './components/character-details/charac
     MatGridListModule,
     MatMenuModule,
     MatAutocompleteModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatListModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

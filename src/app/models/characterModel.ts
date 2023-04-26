@@ -1,11 +1,4 @@
-interface CharacterModel {
-    info: {
-      count: number;
-      pages: number;
-      next: string;
-      prev: string;
-    };
-    results: {
+export interface CharacterModel {
       id: number;
       name: string;
       status: string;
@@ -22,5 +15,5 @@ interface CharacterModel {
       };
       image: string;
       episode: string[];
-    }[];
-  }
+
+    }

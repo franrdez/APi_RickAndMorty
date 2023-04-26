@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { Observable, tap, map } from 'rxjs';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-character-list',
@@ -14,5 +15,8 @@ export class CharacterListComponent implements OnInit {
   constructor(private service: ApiService) {}
 
   ngOnInit(): void {}
+
+  page_size: number = 4
+  page_number: number = 1
 
 }

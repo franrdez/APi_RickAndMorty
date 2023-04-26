@@ -5,12 +5,12 @@ import { Router } from '@angular/router';
   selector: '[appCharacterCardClickable]',
 })
 export class CharacterCardClickableDirective {
-  @Input() name: string = '';
+  @Input() id: number = 0;
 
   constructor(private router: Router) {}
 
   @HostListener('click')
   onClick(): void {
-    this.router.navigate(['/character-details', this.name]);
+    this.router.navigate(['/character-details', this.id]);
   }
 }

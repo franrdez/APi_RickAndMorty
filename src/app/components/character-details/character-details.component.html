@@ -1,1 +1,31 @@
-<p>character-details works!</p>
+<div class="row" *ngIf="character$ | async as character">
+
+  <div class="details">
+    <mat-card class="example-card">
+      <h3>{{character.name}}</h3>
+      <mat-list>
+        <mat-list-item>Status: {{character.status}}</mat-list-item>
+        <mat-list-item>Species: {{character.species}}</mat-list-item>
+        <mat-list-item>Type: {{character.type}}</mat-list-item>
+        <mat-list-item>Gender: {{character.gender}}</mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle>Origin: </span>
+          <span matListItemLine>{{character.origin.name}}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle>Location: </span>
+          <span matListItemLine>{{character.location.name}}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle>Image: </span>
+          <span>{{character.image}}</span>
+        </mat-list-item>
+        <img mat-card-image src="{{character.image}}" alt="Personajes">
+      </mat-list>
+    </mat-card>
+  </div>
+  <button mat-fab extended color="primary" (click)="onGoBack()">
+    <mat-icon>favorite</mat-icon>
+    Back
+  </button>
+</div>

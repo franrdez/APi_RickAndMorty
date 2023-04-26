@@ -1,32 +1,6 @@
-<!-- <pre>
-  {{characters | json}}
-
-</pre> -->
-
-<!-- interface CharacterModel {
-  results: {
-    id: number;
-    name: string;
-    status: string;
-    species: string;
-    type: string;
-    gender: string;
-    origin: {
-      name: string;
-      url: string;
-    };
-    location: {
-      name: string;
-      url: string;
-    };
-    image: string;
-    episode: string[];
-  }[];
-} -->
-
-  <div *ngIf="characters$ | async as characters " class="container">
+<div *ngIf="characters$ | async as characters " class="container">
   <div class="rick-list">
-    <mat-card class="example-card" *ngFor="let ch of characters" appCharacterCardClickable [name]="ch.name">
+    <mat-card class="example-card" *ngFor="let ch of characters " appCharacterCardClickable [id]="ch.id">
       <mat-card-header>
         <mat-card-title>{{ch.name}}</mat-card-title>
         <mat-card-subtitle>{{ch.species}}</mat-card-subtitle>
@@ -39,6 +13,5 @@
       </mat-card-content>
     </mat-card>
   </div>
+
 </div>
-
-
