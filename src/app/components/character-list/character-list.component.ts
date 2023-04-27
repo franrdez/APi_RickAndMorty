@@ -14,9 +14,13 @@ export class CharacterListComponent implements OnInit {
 
   constructor(private service: ApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { console.log(this.characters$)}
 
-  page_size: number = 4
+  page_size: number = 6
   page_number: number = 1
 
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
 }

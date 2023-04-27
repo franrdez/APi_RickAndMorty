@@ -24,6 +24,10 @@ export class ApiService {
     return this.http.get<CharacterModel>(direccion);
   } */
 
+  public getAllEpisodes(): Observable<any> {
+    return this.http.get(`${this.baseUrl}episode`);
+  }
+
   public getEpisode(episode: number | string): Observable<any> {
     return this.http.get(`${this.baseUrl}character/${+episode}`);
   }

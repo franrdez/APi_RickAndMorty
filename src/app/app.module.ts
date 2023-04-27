@@ -20,8 +20,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { CharacterDetailsComponent } from './components/character-details/character-details.component';
 import { MatButtonModule } from '@angular/material/button';
 import { StoreModule } from '@ngrx/store';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { PaginatorPipe } from './pipes/paginator.pipe';
+import { MatTreeModule } from '@angular/material/tree';
+import { EpisodesComponent } from './components/episodes/episodes.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { PaginatorPipe } from './pipes/paginator.pipe';
     CharacterListComponent,
     CharacterCardClickableDirective,
     CharacterDetailsComponent,
-    PaginatorPipe
+    PaginatorPipe,
+    EpisodesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,7 @@ import { PaginatorPipe } from './pipes/paginator.pipe';
     MatFormFieldModule,
     MatButtonModule,
     MatListModule,
+    MatTreeModule,
     StoreModule.forRoot({}, {})
   ],
   providers: [],

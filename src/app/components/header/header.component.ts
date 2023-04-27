@@ -22,4 +22,8 @@ export class HeaderComponent implements OnInit{
   navegarCharacter(){
     this.router.navigate(['/character-list']);
   }
+
+  navegarEpisodes(){
+    this.router.navigate(['/episodes']);
+  }
 }
