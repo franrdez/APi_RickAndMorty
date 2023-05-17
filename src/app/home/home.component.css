@@ -6,3 +6,10 @@
   justify-content: center;
   margin-top: 5rem;
 }
+
+.image{
+  display: flex;
+  background-position: center;
+  width: auto;
+  height: auto;
+}

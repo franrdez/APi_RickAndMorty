@@ -11,4 +11,9 @@
   cursor: pointer;
 }
 
+.form-control {
+  max-width: fit-content;
+  justify-content: center;
+}
+
 
